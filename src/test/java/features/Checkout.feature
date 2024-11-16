@@ -11,4 +11,3 @@ Feature: Place the order for Products
       | Name |
       | Tom  |
       | str |
-      |Beet|
