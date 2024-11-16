@@ -6,21 +6,23 @@
 trigger:
 - master
 
+strategy:
+  matrix:
+    jdk11_windows:
+      imageName: "windows-latest"
+      jdkVersion: "17"
+  maxParallel: 2
+
 pool:
   vmImage: windows-latest
 
 steps:
-- task: JavaToolInstaller@0
- inputs:
-   versionSpec: '17'
-   jdkArchitectureOption: 'x64'
-   jdkSourceOption: 'PreInstalled'
-
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'test'
     javaHomeOption: 'JDKVersion'
+    jdkVersionOption: $(jdkVersion)
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
