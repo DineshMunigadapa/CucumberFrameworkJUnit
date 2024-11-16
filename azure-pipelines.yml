@@ -34,7 +34,7 @@ steps:
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Pipeline Artifact'
   inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)'
+    targetPath: 'target'
     artifact: 'targetfolderdetails'
     publishLocation: 'pipeline'
 
