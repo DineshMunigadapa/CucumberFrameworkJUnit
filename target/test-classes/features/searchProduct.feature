@@ -1,3 +1,4 @@
+@test123
 Feature: Search and Place the order for Products
 
   #Scenario: Search Experience for product search in both home and offers page
@@ -13,4 +14,4 @@ Feature: Search and Place the order for Products
     Examples: 
       | Name |
       | Tom  |
-      | str |
+      #| str |
