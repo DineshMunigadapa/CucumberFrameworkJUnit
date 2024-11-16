@@ -25,7 +25,7 @@ steps:
     mavenVersionOption: 'Default'
     jdkArchitectureOption: "x64"
     publishJUnitResults: true
-    testResultsFiles: "**/cucumber.html"
+    testResultsFiles: "cucumber.html"
     goals: "package"
     mavenAuthenticateFeed: false
     effectivePomSkip: false
