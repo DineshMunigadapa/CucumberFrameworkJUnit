@@ -42,4 +42,4 @@ steps:
 - task: publishhtmlreport@1
   displayName: 'HTML Report'
   inputs:
-    reportDir: 'cucumber.html'
+    reportDir: 'target/cucumber.html'
