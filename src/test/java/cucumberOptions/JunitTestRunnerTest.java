@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 features = "src/test/java/features",
 glue="stepDefinitions",
 monochrome = true,
-plugin = {"html:target/cucumber.html","json:target/cucumber.json",
+plugin = {"html:cucumber.html","json:target/cucumber.json",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		"rerun:target/failed_scenarios.txt"})
 public class JunitTestRunnerTest{
