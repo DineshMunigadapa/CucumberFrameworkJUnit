@@ -20,10 +20,13 @@ steps:
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'test'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: $(jdkVersion)
     mavenVersionOption: 'Default'
+    jdkArchitectureOption: "x64"
+    publishJUnitResults: true
+    testResultsFiles: "**/SparkReport.html"
+    goals: "package"
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
