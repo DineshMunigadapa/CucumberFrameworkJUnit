@@ -26,7 +26,7 @@ steps:
     jdkArchitectureOption: "x64"
     publishJUnitResults: true
     testResultsFiles: "cucumber.html"
-    goals: "clean test"
+    goals: "test"
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
@@ -34,8 +34,8 @@ steps:
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Pipeline Artifact'
   inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)'
-    artifact: drop
+    targetPath: 'target'
+    artifact: 'targetfolderdetails'
     publishLocation: 'pipeline'
 
 
